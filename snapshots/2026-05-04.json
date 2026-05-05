@@ -1,0 +1,108 @@
+{
+  "snapshot_taken_at": "2026-05-05T03:50:00Z",
+  "snapshot_taken_at_local": "2026-05-04T23:50:00-04:00",
+  "user": "samin",
+  "active_count": 10,
+  "agents": [
+    {
+      "id": "52a82ad0-034e-4b92-8532-6fb3adc3e0de",
+      "title": "Nightly Check-in with Samin",
+      "rrule": "DTSTART;TZID=America/New_York:20260415T123129\nRRULE:FREQ=DAILY;BYHOUR=21;BYMINUTE=30;BYSECOND=0",
+      "next_run": "2026-05-05T21:30:00-04:00",
+      "model": "zo:anthropic/claude-opus-4-7",
+      "delivery_method": "sms",
+      "active": true,
+      "instruction_truncated_500": "Text the user (Samin) at 9:30 PM ET every night. Ask them: 1) What did you get done today? 2) What are your top 3 priorities for tomorrow? Keep it conversational and short \u2014 this is an SMS check-in."
+    },
+    {
+      "id": "2cd9aa4e-1ae5-4590-b8f8-f2ad90e3e73f",
+      "title": "Check Skool community for interactions",
+      "rrule": "DTSTART;TZID=America/New_York:20260415T134510\nRRULE:FREQ=DAILY;BYHOUR=14;BYMINUTE=0",
+      "next_run": "2026-05-05T14:00:10-04:00",
+      "model": "zo:anthropic/claude-opus-4-7",
+      "delivery_method": "sms",
+      "active": true,
+      "instruction_truncated_500": "Cat Assistant \u2014 Skool community comment / engagement check (2 PM ET).\n\n# Hard timeout\nTotal wall time budget: 20 minutes. If browser/CDP doesn't connect within 60 seconds on first attempt, send a 1-line SMS to Samin \"skool 2pm engagement check skipped \u2014 browser unreachable\" and EXIT cleanly. Do not retry indefinitely.\n\n# Blessed pattern (MUST follow)\nUse the SAME Steel CDP / Playwright pattern documented in `~/.claude/skills/ia-trade-alert-post/SKILL.md` (the \"Posting w"
+    },
+    {
+      "id": "cc84a5a4-1647-4cab-ab7c-435203b6680e",
+      "title": "Check Skool community for new activity",
+      "rrule": "DTSTART;TZID=America/New_York:20260415T134513\nRRULE:FREQ=DAILY;BYHOUR=18;BYMINUTE=0",
+      "next_run": "2026-05-05T18:00:13-04:00",
+      "model": "zo:anthropic/claude-opus-4-7",
+      "delivery_method": "sms",
+      "active": true,
+      "instruction_truncated_500": "Cat Assistant \u2014 Skool community comment / engagement check (6 PM ET).\n\n# Hard timeout\nTotal wall time budget: 20 minutes. If browser/CDP doesn't connect within 60 seconds on first attempt, send a 1-line SMS \"skool 6pm engagement check skipped \u2014 browser unreachable\" and EXIT cleanly. Do not retry indefinitely.\n\n# Blessed pattern (MUST follow)\nUse the SAME Steel CDP / Playwright pattern from `~/.claude/skills/ia-trade-alert-post/SKILL.md`. Do NOT use Zo's `use_webpage`/`view_webpage` for typing on Skool \u2014"
+    },
+    {
+      "id": "19c1bc9e-db1c-4b5e-ae25-309e08c41367",
+      "title": "Skool Community Engagement and Support",
+      "rrule": "DTSTART;TZID=America/New_York:20260415T134519\nRRULE:FREQ=DAILY;BYHOUR=23;BYMINUTE=0",
+      "next_run": "2026-05-05T23:00:19-04:00",
+      "model": "zo:anthropic/claude-opus-4-7",
+      "delivery_method": "sms",
+      "active": true,
+      "instruction_truncated_500": "Cat Assistant \u2014 Skool community late-night engagement (11 PM ET).\n\n# Hard timeout\nTotal wall time budget: 20 minutes. If browser/CDP doesn't connect within 60 seconds, send a 1-line SMS \"skool 11pm engagement check skipped \u2014 browser unreachable\" and EXIT cleanly. No infinite retry.\n\n# Blessed pattern (MUST follow)\nUse the Steel CDP / Playwright pattern from `~/.claude/skills/ia-trade-alert-post/SKILL.md`. NO Zo `use_webpage`/`view_webpage` for typing on Skool.\n\nSteps:\n1. `open_webpage(\"https://www.sko"
+    },
+    {
+      "id": "96791b61-4108-485f-aea2-0e3e01d65e43",
+      "title": "latest ai insights & updates from today",
+      "rrule": "DTSTART;TZID=America/New_York:20260415T134540\nRRULE:FREQ=DAILY;BYHOUR=13;BYMINUTE=0",
+      "next_run": "2026-05-05T13:00:40-04:00",
+      "model": "zo:anthropic/claude-opus-4-7",
+      "delivery_method": "sms",
+      "active": true,
+      "instruction_truncated_500": "Cat Assistant \u2014 daily AI insights post on Skool Claude Club (1 PM ET).\n\n# Hard timeout\nTotal wall time budget: 25 minutes. If, after research, the browser/CDP doesn't connect within 90 seconds, save the drafted post body to `/home/workspace/Documents/cat-drafts/YYYY-MM-DD-ai-insights.md` and SMS Samin \"ai insights post skipped \u2014 browser unreachable, draft saved at <path>\". EXIT cleanly. NO infinite retry.\n\n# Step 1 \u2014 Research\nUse `x_search`, `web_search`, and 1-2 `web_research` calls to find the 3"
+    },
+    {
+      "id": "d0ce4b02-77e2-456c-9dc5-6bcb13e92b3e",
+      "title": "Sponsorship CRM Auto-Update Summary",
+      "rrule": "DTSTART;TZID=America/New_York:20260415T185420\nRRULE:FREQ=DAILY;BYHOUR=8;BYMINUTE=0",
+      "next_run": "2026-05-05T08:00:20-04:00",
+      "model": "byok:fae7eeab-9be4-44fb-9530-3cfaf9bfca62",
+      "delivery_method": null,
+      "active": true,
+      "instruction_truncated_500": "You are the Sponsorship CRM auto-updater. Your job is to scan Samin's Gmail for new sponsorship/brand deal activity and update the CRM database accordingly.\n\n**Step 1: Get current CRM state**\n- Read t..."
+    },
+    {
+      "id": "d244ddce-ef1e-46c6-82e7-e911cb1d54d0",
+      "title": "Samin's Sponsorship Deal Check-In",
+      "rrule": "DTSTART;TZID=America/New_York:20260415T185428\nRRULE:FREQ=DAILY;INTERVAL=3;BYHOUR=11;BYMINUTE=0",
+      "next_run": "2026-05-06T11:00:28-04:00",
+      "model": "byok:fae7eeab-9be4-44fb-9530-3cfaf9bfca62",
+      "delivery_method": "telegram",
+      "active": true,
+      "instruction_truncated_500": "You are Samin's sponsorship check-in agent. Every 3 days, you review the current state of his YouTube sponsorship deals and send him a concise update + ask for his input.\n\n**Step 1: Pull current CRM d..."
+    },
+    {
+      "id": "86858cc7-b888-4700-8ca3-a3767f768f5a",
+      "title": "Sponsorship Request Processing and Drafting",
+      "rrule": "DTSTART;TZID=America/New_York:20260415T235419\nRRULE:FREQ=HOURLY;INTERVAL=3",
+      "next_run": "2026-05-04T23:54:19-04:00",
+      "model": "byok:fae7eeab-9be4-44fb-9530-3cfaf9bfca62",
+      "delivery_method": "email",
+      "active": true,
+      "instruction_truncated_500": "Scan Samin's Gmail inbox for new sponsorship/partnership/collab emails and auto-draft replies when rates are requested.\n\nSTEPS:\n\n1\\. Search inbox using mcp__claude_ai_Gmail__gmail_search_messages:\n\nQu..."
+    },
+    {
+      "id": "4a9ff33c-a0eb-40bc-ae34-2bf95f980002",
+      "title": "Samin's Top 3 Priorities for Today",
+      "rrule": "DTSTART;TZID=America/New_York:20260416T215330\nRRULE:FREQ=DAILY;BYHOUR=9;BYMINUTE=0;BYSECOND=0",
+      "next_run": "2026-05-05T09:00:00-04:00",
+      "model": "zo:anthropic/claude-opus-4-7",
+      "delivery_method": "sms",
+      "active": true,
+      "instruction_truncated_500": "Text Samin his top 3 priorities for today. Pull them from the most recent accountability conversation (the 9:30pm check-in from the night before). If no new top 3 were received, remind him of the ones carried over from the last known list and ask him to confirm or update. Keep it short, SMS style, no markdown."
+    },
+    {
+      "id": "1b8335dc-a806-4031-855f-4ee12c6cd6b3",
+      "title": "Daily IA Trade Alert and Skool Posting",
+      "rrule": "DTSTART;TZID=America/New_York:20260427T203442\nRRULE:FREQ=DAILY;BYHOUR=21;BYMINUTE=0;BYSECOND=0;BYDAY=MO,TU,WE,TH,FR",
+      "next_run": "2026-05-05T21:00:00-04:00",
+      "model": "zo:anthropic/claude-opus-4-7",
+      "delivery_method": "sms",
+      "active": true,
+      "instruction_truncated_500": "Daily IA Trade Alert checker and Skool poster.\n\n# Step 1 \u2014 Check Gmail\nSearch Samin's Gmail for emails from `bingo@patreon.com` with subject containing \"IA Trade Alert\" received in the last 24 hours.\nUse `mcp__claude_ai_Gmail__gmail_search_messages` with query: `from:bingo@patreon.com subject:\"IA Trade Alert\" newer_than:1d`.\n..."
+    }
+  ]
+}
